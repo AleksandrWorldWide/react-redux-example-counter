@@ -22,6 +22,17 @@ class App extends React.Component {
 			})
 		)
 	}
+	onAsync = () => {
+		return(
+			setTimeout(() => {
+				return(
+					this.setState({
+						count: this.state.count + 1
+					})
+				)
+			}, 2000)
+		)
+	}
 	render() {
 		return (
 			<div className={css.App}>
@@ -29,6 +40,7 @@ class App extends React.Component {
 					count={this.state.count}
 					onAdd={this.onAdd}
 					onSub={this.onSub}
+					onAsync={this.onAsync}
 				/>
 			</div>
 		 )
