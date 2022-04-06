@@ -1,4 +1,4 @@
-import { add, sub, async} from './types'
+import { add, sub} from './types'
 
 const initialState = {
 	count: 10
